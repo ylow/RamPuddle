@@ -14,9 +14,10 @@ layer.
 
 ## Architecture
 Fundamentally, RamPuddle provides a *trusted* (unauthenticated, or minimally 
-authenticated), AP, distributed key-value store for *large* (up to 1GB) immutable 
-values. There is no fault tolerance, no replication, no sharding, etc. Any 
-replication or load balancing management is left to the client implementation.
+authenticated), AP, distributed key-value store for *large* (up to 1GB) 
+fixed length values. There is no fault tolerance, no replication, no sharding,
+etc. Any replication or load balancing management is left to the
+client implementation.
 
 Each server process is single threaded, manages a single fixed size pool 
 with optional disk spillover, and is completely stand-alone and is unaware of
